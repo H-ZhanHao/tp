@@ -60,6 +60,7 @@ public class IngredientInventory {
                 throw new IllegalArgumentException("Ingredient '" + name + "' already exists.");
             }
             inventory.put(name, new Ingredient(name, quantity, unit, category));
+            Ui.showMessage("Added ingredient '" + name + "'.");
         } catch (IllegalArgumentException e) {
             Ui.showMessage(e.getMessage());
         }
